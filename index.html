@@ -1,1 +1,60 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>💗 My Pink Wishlist · 15 June 2026 💗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="photo-frame" onclick="openPhotoUpload()">
+                <img id="profilePhoto" class="profile-photo" style="display: none;" alt="Your photo">
+                <div id="photoPlaceholder" class="photo-placeholder">📸</div>
+            </div>
+            <div class="photo-upload-hint" onclick="openPhotoUpload()">✨ click to add your photo ✨</div>
+            
+            <div class="date-badge">
+                <span>📅</span> 15 June 2026 · 09:44 <span>🎀</span>
+            </div>
+            <h1>
+                <span>💗</span> My Pink Wishlist <span>💖</span>
+            </h1>
+            <div class="sub">dreaming in pink · manifesting magic ✨</div>
+        </div>
+        
+        <div class="content">
+            <div id="wishlistContainer"></div>
+            
+            <div class="actions">
+                <div class="progress-area">
+                    <div class="progress-text" id="progressLabel">0/15 fulfilled</div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button id="resetBtn">⟳ Reset all</button>
+                    <button id="shareBtn">💌 Share wishlist</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span>🩰 ballet dreams · 💄 soft glam · 🧸 cozy vibes</span>
+            <span>🌸 every tick brings me closer to joy 🌸</span>
+        </div>
+    </div>
+    
+    <div id="photoModal" class="modal">
+        <div class="modal-content">
+            <h3>📸 Upload your beautiful photo</h3>
+            <input type="file" id="photoUpload" accept="image/*" onchange="uploadPhoto(event)">
+            <button class="close-modal" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
